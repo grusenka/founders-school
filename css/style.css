@@ -1,0 +1,472 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    counter-reset: benefit-counter;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.main {
+    font-family: Rubik, sans-serif;
+}
+
+.section-wrapper {
+    padding: 100px 0;
+}
+
+.main-section-wrapper {
+    background-image: url("../assets/section-main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-main {
+    width: 1140px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 64px;
+    counter-reset: benefit-counter;
+}
+
+.main-title {
+    margin: 0 0 45px;
+    color: #373737;
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.main-description {
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 300;
+    color: #707070;
+}
+
+.benefits-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 11px;
+    margin-top: 78px;
+}
+
+.benefits-item {
+    position: relative;
+    padding: 25px 25px 30px;
+    color: #1E2E2E;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 31px;
+    background-color: rgba(0, 113, 136, 0.25);
+    overflow: hidden;
+}
+
+.benefits-item::before {
+    counter-increment: benefit-counter;
+    content: counter(benefit-counter);
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 96px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.section-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button {
+    display: inline-flex;
+    padding: 16px 48px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: #007188;
+    color: #ffffff;
+}
+
+.courses-section-wrapper {
+    background-color: #F4F9F9;
+}
+
+.section-courses {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.section-courses-title {
+    margin-bottom: 44px;
+    font-family: Rubik, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #041011;
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.toggle-switch-label {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+    border: 1px solid #FC9C25;
+    border-radius: 8px;
+    background: #ffffff;
+    font-family: Rubik, sans-serif;
+    font-weight: bold;
+    color: #FC9C25;
+    cursor: pointer;
+}
+
+.toggle-switch-label::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    border-radius: 8px;
+    background: #FC9C25;
+    transition: all 0.3s;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label::before {
+    left: 50%;
+}
+
+.toggle-switch-label .toggle-switch-button {
+    padding: 7px 75px;
+    text-align: center;
+    z-index: 1;
+}
+
+.toggle-switch-checkbox {
+    display: none;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-button:first-child {
+    color: #FC9C25;
+    transition: color 0.3s;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-button:last-child {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.toggle-switch-checkbox + .toggle-switch-label .toggle-switch-button:first-child {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.toggle-switch-checkbox + .toggle-switch-label .toggle-switch-button:last-child {
+    color: #FC9C25;
+    transition: color 0.3s;
+}
+
+.swiper {
+    height: 720px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #D9D9D9;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FC9C25;
+}
+
+.course {
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+
+.course-image {
+    width: 100%;
+}
+
+.course-description {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 30px 32px;
+}
+
+.course-tag {
+    margin-bottom: 13px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FC9C25;
+}
+
+.course-title {
+    margin-bottom: 23px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #041011;
+}
+
+.course-info {
+    margin-top: auto;
+    font-size: 16px;
+    font-weight: normal;
+    color: #909C9D;
+}
+
+
+.section-faq-title {
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.section-accordion {
+    padding: 0 135px;
+}
+
+.accordion {
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.accordion-item {
+    position: relative;
+}
+
+.accordion-item .accordion-input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.15s ease-out;
+    border-color: transparent;
+    border-radius: 0 0 8px 8px;
+    border-width: 0 1px 1px 1px;
+}
+
+.accordion-text {
+    padding: 0 32px 24px;
+    font-family: Rubik, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.accordion-item .accordion-input:checked ~ .accordion-label,
+.accordion-item .accordion-input:checked ~ .accordion-content {
+    border-color: #007188;
+}
+
+.accordion-item .accordion-input:checked ~ .accordion-label {
+    color: #007188;
+    border-width: 1px 1px 0 1px;
+    border-radius: 8px 8px 0 0;
+}
+
+.accordion-item .accordion-input:checked ~ .accordion-content {
+    max-height: 10rem;
+    transition: border-color 0s, linear max-height 0.55s;
+    border-style: solid;
+    border-color: #007188;
+    border-radius: 0 0 8px 8px;
+    border-width: 0 1px 1px 1px;
+}
+
+.accordion-label {
+    position: relative;
+    display: flex;
+    color: #041011;
+    cursor: pointer;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 24px 32px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #041011;
+    border-radius: 8px;
+    font-family: Rubik, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.accordion-label::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 32px;
+    width: 42px;
+    height: 42px;
+    background-image: url('../assets/icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 42px 42px;
+    transition: linear 0.15s;
+}
+
+.accordion-item .accordion-input:checked + .accordion-label::after {
+    background-image: url('../assets/icon-opened.svg');
+    transform: rotate(45deg);
+}
+
+.contacts-section-wrapper {
+    background-color: #007188;
+}
+
+.section-contacts {
+    max-width: 1140px;
+    margin: auto;
+    position: relative;
+}
+
+.section-contacts::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: calc(50% - 49px);
+    width: 87px;
+    height: 98px;
+    background-image: url("../assets/contacts-decor.svg");
+    background-position: center;
+    background-size: 87px 98px;
+    background-repeat: no-repeat;
+}
+
+.section-contacts::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: calc(50% - 49px);
+    width: 87px;
+    height: 98px;
+    background-image: url("../assets/contacts-decor-right.svg");
+    background-position: center;
+    background-size: 87px 98px;
+    background-repeat: no-repeat;
+}
+
+.section-form-title {
+    margin-bottom: 40px;
+    font-family: Rubik, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+}
+
+.form-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 800px;
+    margin: 0 auto 25px;
+    border: 0;
+}
+
+.form-field {
+    height: 60px;
+    border: none;
+    border-radius: 200px;
+}
+
+.form-field:focus {
+    outline: none;
+}
+
+.form-field-name {
+    padding-left: 80px;
+    background-image: url("../assets/field-contact.svg");
+    background-repeat: no-repeat;
+    background-position: 32px center;
+    background-size: 28px 30px;
+}
+
+.form-field-email {
+    padding-left: 80px;
+    background-image: url("../assets/field-email.svg");
+    background-repeat: no-repeat;
+    background-position: 32px center;
+    background-size: 31px 25px;
+}
+
+.form-field-phone {
+    padding-left: 80px;
+    background-image: url("../assets/field-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 32px center;
+    background-size: 33px 33px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow-x: hidden;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: top;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.checkbox-label::before {
+    content: '';
+    flex-shrink: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-top: 6px;
+    opacity: .8;
+    background-color: #ffffff;
+    border: 1px solid #FC9C25;
+    border-radius: 3px;
+}
+.checkbox-input:checked + .checkbox-label::before {
+    background-image: url('../assets/check.svg');
+    background-size: 14px 13px;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+}
+
+.checkbox-label-text {
+    font-size: 14px;
+}
+
+.text-link {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.section-button .btn-success {
+    font-size: 24px;
+}
+

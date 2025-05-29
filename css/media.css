@@ -1,0 +1,147 @@
+@media only screen and (max-width: 1024px) {
+    .section-main {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .main-title {
+        margin: 0 0 24px;
+        font-size: 36px;
+    }
+
+    .main-description {
+        font-size: 20px;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .benefits-item {
+        position: relative;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .benefits-item::before {
+        right: 0;
+        bottom: -57px;
+        font-size: 90px;
+    }
+
+    .section-button {
+        margin-top: 20px;
+    }
+
+    .section-button .btn-success {
+        min-height: 50px;
+        line-height: 40px;
+        font-size: 20px;
+        border-radius: 6px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .section-courses-title {
+        margin-bottom: 36px;
+        font-size: 36px;
+    }
+
+    .toggle-switch {
+        margin-bottom: 10px;
+    }
+
+    .toggle-switch-label {
+        font-size: 14px;
+    }
+
+    .toggle-switch-label .toggle-switch-button {
+        padding: 7px 20px;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .swiper-pagination {
+        margin-top: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 5px;
+        height: 5px;
+    }
+
+    .course-description {
+        height: 218px;
+        padding: 10px 15px 15px;
+    }
+
+    .course-title {
+        margin-bottom: 23px;
+        font-size: 24px;
+    }
+
+    .course-info {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .section-faq-title {
+        margin-bottom: 20px;
+        font-size: 36px;
+    }
+
+    .section-accordion {
+        padding: 0 50px;
+    }
+
+    .accordion {
+        overflow: hidden;
+        margin-bottom: 24px;
+    }
+
+    .accordion-item {
+        position: relative;
+    }
+
+    .accordion-text {
+        padding: 0 16px 8px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .accordion-label {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .accordion-label::after {
+        top: 6px;
+        right: 16px;
+        width: 21px;
+        height: 21px;
+        background-size: 21px 21px;
+        background-color: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .section-contacts::before {
+        display:none
+    }
+
+    .section-contacts::after {
+        display: none;
+    }
+
+    .section-form-title {
+        font-size: 36px;
+    }
+
+}
